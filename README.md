@@ -10,6 +10,10 @@ Identify and count clusters across a series of .sam files.
 
 `git clone https://github.com/DomBennett/Project-cluster.git`
 
+Or download the zipped folder:
+
+`wget https://github.com/DomBennett/Project-cluster/archive/master.zip`
+
 ## Requirements
 
 * One .sam file stored per folder
