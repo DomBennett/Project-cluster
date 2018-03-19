@@ -15,7 +15,7 @@ def cluster(infile, cdhit, thrds=1):
     Run cdhit
     '''
     outfile = infile.replace('.fasta', '.cl')
-    cmd = '{0} -i {1} -o {2} -c 1.0 -l 60 -s 0.9 -T {3} -d 0'.format(cdhit, infile, outfile,\
+    cmd = '{0} -i {1} -o {2} -c 1.0 -l 60 -T {3} -d 0'.format(cdhit, infile, outfile,\
                                                         thrds)
     # shell, security risk?
     logfl = 'cdhit_log'
