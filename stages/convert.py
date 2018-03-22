@@ -1,5 +1,5 @@
 #! /bin/usr/env python
-# D.J. Bennett
+# D.J. Bennett & J.S Eriksson
 '''
 Read .sam file, extract only the exon-length sections of sequence and write
 out as .fasta
@@ -16,6 +16,10 @@ def convert(infile, outfile):
     lines = []
     with open(infile, "rU") as infile:
         for line in infile:
+            line = line.strip()
+            if line.startswith("> "):
+                line = line.replace('> ', '>')
+            line = line.replace(' ', '_')
             lines.append(line)
     dflns_sqs = extract_exon(lines)
     with open(outfile, "w") as outfile:
