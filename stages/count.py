@@ -9,7 +9,7 @@ def count(clfl, min_nsqs=10):
     Count number of clusters
     '''
     lines = []
-    with open(clfl + '.clstr', "rU") as infile:
+    with open(clfl, "rU") as infile:
         for line in infile:
             lines.append(line)
     nsqs = 0

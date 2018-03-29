@@ -1,5 +1,6 @@
 # Data
 data/
+test_data/
 *_log
 
 # Byte-compiled / optimized / DLL files
