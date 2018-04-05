@@ -59,7 +59,7 @@ def extract(cls_sqs):
     return refs_list
 
 
-def compare_seq(fldr, outfile='test.fasta'):
+def compare_seq(fldr, outfile1):
     '''
     Return a list of sequences for Geneious.
     '''
@@ -73,6 +73,6 @@ def compare_seq(fldr, outfile='test.fasta'):
         for k,v in seq_fasta.items():
             if k in r:
                 reference.append('> {0}\n{1}\n'.format(k,v))
-    with open(outfile, "w") as otfile:
+    with open(outfile1, "w") as outfile:
         for i in reference:
-            otfile.write(i)
+            outfile.write(i)
