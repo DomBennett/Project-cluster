@@ -10,13 +10,13 @@ import os
 import subprocess
 
 # FUNCTION
-def cluster(infile, cdhit, thrds=1):
+def cluster(infile, cdhit, lngthfrctn, thrds=1):
     '''
     Run cdhit
     '''
     outfile = infile.replace('.fasta', '.cl')
-    cmd = '{0} -i {1} -o {2} -c 1.0 -T {3}'.format(cdhit, infile, outfile,\
-                                                   thrds)
+    cmd = '{0} -i {1} -o {2} -c 1.0 -l {3} -T {4} -d 0'.format(cdhit, infile, outfile,\
+                                                   lngthfrctn, thrds)
     # shell, security risk?
     logfl = 'cdhit_log'
     with open(logfl, 'w') as log:
